@@ -1,12 +1,15 @@
-import React from 'react'
-import AuthFormm from '../auth/AuthForm'
+import React from 'react';
+import AuthFormm from '../auth/AuthForm';
+import EmailNavigation from './EmailNavigationBox';
+
 
 const Home = () => {
-  return (
-    <div>
-      <AuthFormm />
-    </div>
-  )
+    return (
+        <div>
+            <EmailNavigation />
+            <AuthFormm />
+        </div>
+    )
 }
 
 export default Home

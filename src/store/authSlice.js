@@ -7,16 +7,16 @@ export const authSlice = createSlice({
     name: 'isAuthenticated',
     initialState: initialAuthState,
     reducers: {
-        login(state,action) {
+        login(state, action) {
             localStorage.setItem('token', action.payload);
-            state.token =action.payload
-            state.isLoggedIn=true;
+            state.token = action.payload
+            state.isLoggedIn = true;
         },
         logout(state) {
             localStorage.removeItem('token');
             localStorage.removeItem('email');
             state.token = null;
-            state.isLoggedIn=false;
+            state.isLoggedIn = false;
         }
     }
 })
