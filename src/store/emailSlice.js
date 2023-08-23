@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { EditorState } from "draft-js";
 
 const emailInitialState = {
+    email:'',
     subject: '',
     body: EditorState.createEmpty(),
 }
@@ -9,6 +10,9 @@ export const emailSlice = createSlice({
     name: 'email',
     initialState: emailInitialState,
     reducers: {
+        setEmail: (state,action)=>{
+            state.email=action.payload
+        },
         setEmailSubject: (state, action) => {
             state.subject = action.payload;
         },

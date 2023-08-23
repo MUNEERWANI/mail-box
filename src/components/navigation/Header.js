@@ -5,10 +5,14 @@ import { Link } from 'react-router-dom';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Header=() =>{
+  const handbleButtonicon=()=>{
+    console.log('ddb')
+    alert('fun')
+  }
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link} to="/"><ReorderIcon />Mail-Box</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><ReorderIcon onClick={handbleButtonicon} />Mail-Box</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -18,7 +22,7 @@ const Header=() =>{
           </Nav>
         </Navbar.Collapse>
       </Container>
-      <AccountCircleIcon  />
+      <AccountCircleIcon src="sharpne.jpg" />
     </Navbar>
   );
 }

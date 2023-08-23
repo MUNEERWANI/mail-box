@@ -67,7 +67,7 @@ const AuthFormm = () => {
       }).then((data) => {
         dispatch(authActions.login(data.idToken));
         console.log(data)
-        navigate('/expenses'); // Redirect to UpdateProfile
+        navigate('/'); // Redirect to UpdateProfile
       }).catch((err) => {
         alert(err.message)
       })

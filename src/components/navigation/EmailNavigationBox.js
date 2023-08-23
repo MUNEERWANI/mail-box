@@ -1,23 +1,20 @@
-import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+
 const EmailNavigation = () => {
     //In this component i will describe how to go to email inbox check email
     //compose email option should come 
     //sent email component should come
     return (
-        <div>
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Inbox
-                </Dropdown.Toggle>
+            
+            <ButtonGroup vertical>
+      <Button as={Link} to="/inbox">Inbox</Button>
+      <Button as={Link} to="composeemail">Compose</Button>
 
-                <Dropdown.Menu>
-                    <Dropdown.Item as={Link} to="/inbox">Inbox</Dropdown.Item>
-                    <Dropdown.Item as={Link} to="composeemail">Compose</Dropdown.Item>
-                    <Dropdown.Item as={Link} to="sent">Sent</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-        </div>
+      <Button as={Link} to="sent">Sent</Button>
+      <Button>Starred</Button>
+    </ButtonGroup>
     )
 }
 
