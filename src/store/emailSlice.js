@@ -19,7 +19,7 @@ export const emailSlice = createSlice({
         setEmailBody: (state, action) => {
             state.body = action.payload;
         },
-        resetEmailComposition: (state) => {
+        resetEmailComposition: (state,action) => {
             state.subject = '';
             state.body = EditorState.createEmpty();
         }
